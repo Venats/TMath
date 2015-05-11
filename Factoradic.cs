@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//Written by Taylor Ferguson.
+//takes an integer greater than or equal to 0 and less than 13! and converts it into a base factorial number
 namespace TMath
 {
     class Factoradic
@@ -28,6 +29,15 @@ namespace TMath
             }
             return placeValues;
 
+        }
+
+        public int GetPlaceValue(int placeValue)
+        {
+            if (placeValue >= baseFactoradic.Count)
+            {
+                return 0;
+            }
+            return baseFactoradic[placeValue];
         }
 
         public static Factoradic operator +(Factoradic a, Factoradic b)
@@ -140,23 +150,14 @@ namespace TMath
             return factString;
         }
 
-        public static int Factorial(int n)
-        {
-            int result = 1;
-            for (int i = n; i > 0; i--)
-            {
-                result *= i;
-            }
-                return result;
-        }
-
-        static void Main(string[] args)
-        {
-            Factoradic num = new Factoradic(-1000);
-            Console.WriteLine(num.ToString());
-            int numBaseTen = num.ToBaseTen();
-            Console.WriteLine(numBaseTen);
-            Console.ReadLine();
-        }
+        //test code:
+        //static void Main(string[] args)
+        //{
+        //    Factoradic num = new Factoradic(-1000);
+        //    Console.WriteLine(num.ToString());
+        //    int numBaseTen = num.ToBaseTen();
+        //    Console.WriteLine(numBaseTen);
+        //    Console.ReadLine();
+        //}
     }
 }

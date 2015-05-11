@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//Written by Taylor Ferguson.
+//memoization of integer factorials from 0! to 12!
 namespace TMath
 {
     class FactorialTable
